@@ -41,10 +41,11 @@
     <div>
       <h3>Write what you have in your mind and it will tell you it is positive or negetive thought.</h3>
     </div>
+    
     <form action="/sentiment_analysis" method="POST" >
     <div class="form-floating">
       <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-      <label for="floatingTextarea2">Write your thoughts hear</label>
+      <label name= 'text' for="floatingTextarea2">Write your thoughts hear</label>
     </div>
      
     <button type="submit" value="Submit" class="btn btn-primary btn-lg">Analyse My Thoughts</button>
@@ -54,18 +55,15 @@
   <div class="col-md-3">
     <h1>Sentiment</h1>
     <div class="alert alert-primary" role="alert">
-      {% if probability %}
         {{ sentiment }}
-         {% endif %}
     </div>
   </div>
 
   <div class="col-md-3">
     <h1>Thought Percentage</h1>
     <div class="alert alert-primary" role="alert">
-      {% if probability %}
-        {{ probability }}
-         {% endif %}
+        {{ sent_percent }}
+         
     </div>
   </div>
 

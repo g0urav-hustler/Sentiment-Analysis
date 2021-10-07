@@ -36,15 +36,18 @@ def sent_analysis():
     x_test = sequence.pad_sequences(word, maxlen = 2000)
 
     predict_prob = model.predict(x_text)
-    sentimen = ''
+    sentiment = ''
     if predict_prob > 0.5:
         sentiment = "Postive"
         img_file = os.path.join(IMAGE_FOLDER, 'Smilling_Emoji.png')
+        
     else:
         sentiment = "Negetive"
         img_file = os.path.join(IMAGE_FOLDER, 'Sad_Emoji.png')
 
-    return render_template('home.html', text = text, sentiment = sentiment, probability = predict_prob, image = img_file)
+    percentage = np.round(predict_prob  - 0.5)*100
+
+    return render_template('home.html', text = text, sentiment = sentiment, sent_percent = percentage, image = img_file)
 
 
 if __name__ == "__main__":
