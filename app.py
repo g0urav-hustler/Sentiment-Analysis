@@ -8,7 +8,7 @@ import numpy as np
 import re
 import os
 
-IMAGE_FOLDER = os.join.path('static', 'images')
+IMAGE_FOLDER = os.path.join('static', 'images')
 
 app = Flask(__name__)
 
