@@ -41,11 +41,12 @@
     <div>
       <h3>Write what you have in your mind and it will tell you it is positive or negetive thought.</h3>
     </div>
-    
+
     <form action="/sentiment_analysis" method="POST" >
     <div class="form-floating">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-      <label name= 'text' for="floatingTextarea2">Write your thoughts hear</label>
+      <input type="text" name ='text' placeholder="Enter you thoughts" >
+      <!-- <textarea class="form-control" placeholder="Write you though here " id="floatingTextarea2" style="height: 100px"></textarea> -->
+      
     </div>
      
     <button type="submit" value="Submit" class="btn btn-primary btn-lg">Analyse My Thoughts</button>

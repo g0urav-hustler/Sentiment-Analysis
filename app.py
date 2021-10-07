@@ -14,18 +14,14 @@ app = Flask(__name__)
 
 app.config['UPLOAD_FOLDER'] = IMAGE_FOLDER
 
-def init():
-    global model,graph
+model = load_model('sentiment_analysis.h5')
 
-    model = load_model('sentiment_analysis.h5')
-    graph = tf.get_default_graph()
-
-@app.route('/', method = ['GET','POST'])
+@app.route('/', methods = ['GET','POST'])
 def home():
 
     return render_template('home.html')
 
-@app.route('/sentiment_analysis', method = ['GET','POST'])
+@app.route('/sentiment_analysis', methods = ['GET','POST'])
 def sent_analysis():
     text = request.form['text']
     text = re.sub('[^a-zA-Z]', ' ', text).lower()
@@ -33,9 +29,9 @@ def sent_analysis():
 
     word_to_id = imdb.get_word_index()
     words = [[word_to_id[word] if (word in word_to_id and word_to_id[word] <=2000) else 0 for word in words]]
-    x_test = sequence.pad_sequences(word, maxlen = 2000)
+    x_test = sequence.pad_sequences(words, maxlen = 2000)
 
-    predict_prob = model.predict(x_text)
+    predict_prob = model.predict(x_test)
     sentiment = ''
     if predict_prob > 0.5:
         sentiment = "Postive"
@@ -51,5 +47,4 @@ def sent_analysis():
 
 
 if __name__ == "__main__":
-    init()
     app.run(debug = True)
