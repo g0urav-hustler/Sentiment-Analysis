@@ -41,7 +41,7 @@ def sent_analysis():
         sentiment = "Negetive"
         img_file = os.path.join(IMAGE_FOLDER, 'Sad_Emoji.png')
 
-    percentage = np.round(predict_prob  - 0.5)*100
+    percentage = (predict_prob  - 0.5)*100
 
     return render_template('home.html', text = text, sentiment = sentiment, sent_percent = percentage, image = img_file)
 
