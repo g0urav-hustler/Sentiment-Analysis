@@ -11,7 +11,7 @@
 ### Technology Used 
 ![](https://img.shields.io/badge/Python-3.7-blue.svg)
 ![](https://img.shields.io/badge/TF-2.6.0-blue.svg)
-![](https://img.shields.io/badge/TF-2.6.0-blue.svg)
+![](https://img.shields.io/badge/NLTK-3.6.3-blue.svg)
 ![](https://img.shields.io/badge/Flask-1.1.1-blue.svg)
 ![](https://img.shields.io/badge/Docker-20.10.12-blue.svg)
 ![](https://img.shields.io/badge/Heroku-7.59.1-blue.svg)
