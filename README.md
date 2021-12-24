@@ -1,13 +1,54 @@
 <h1 align = 'center' >Thought Analyzer  </h1>
 
-**Website** = [Thought Analyzer](https://thought-analyzer.herokuapp.com/)
+**Website** : [Thought Analyzer](https://thought-analyzer.herokuapp.com/)
 
 ## Overview 
 #### It was website that predicts your thought wheather it is positive or negetive.
 
 ### Web view:
 ![](https://github.com/g0urav-hustler/Thought-Analyzer/blob/master/readme%20resources/web%20image.png)
+
 ----------------------------
+## Technical Aspects
+
+### About Dataset
+
+For this problem we are using twitter messages data.
+
+To get you can dowload it from [Kaggle](https://www.kaggle.com/kazanova/sentiment140)
+
+```
+target: Polarity of the tweet (0 = negative, 2 = neutral, 4 = positive)
+
+ids: The ids of the tweet (2048)
+
+date: the date of the tweet (Sat May 16 23:58:44 UTC 2009)
+
+flag: The query (lyx). If there is no query, then this value is NO_QUERY.
+
+user: The user that tweeted (robotickilldozr)
+
+text: Messages from the users
+
+```
+
+### Data Preprocessing
+
+- Only target and text data is useful, drop other columns
+- Clean the messages, remove unwanted symbols like @,#,!,& etc.
+- Stemming the words in the message. For that I use PorterStemmer. For more info use [reference](https://www.geeksforgeeks.org/python-stemming-words-with-nltk/)
+- Words into numbers. For that I use imdb word library. It has more than 50,000 words. 
+- Padding the messages so that length of all messages should be equal. To understand padding use[referenc](https://www.tensorflow.org/guide/keras/masking_and_padding)
+
+Now the data is ready for building the model.
+
+#### About Models
+1. First build simple Logistic Regression model. It's accuracy was only around **53%**.
+2. Build Random Forest Classifier that gives little bit better accuracy of around **57%**.
+3. Now build a LSTM model which gives a better accuracy of around **73%**.
+
+Selecting LSTM model as final model as it gives best accuracy amoung all model.
+
 ### Technology Used 
 ![](https://img.shields.io/badge/Python-3.7-blue.svg)
 ![](https://img.shields.io/badge/TF-2.6.0-blue.svg)
