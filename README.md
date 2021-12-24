@@ -38,7 +38,7 @@ text: Messages from the users
 - Clean the messages, remove unwanted symbols like @,#,!,& etc.
 - Stemming the words in the message. For that I use PorterStemmer. For more info use [reference](https://www.geeksforgeeks.org/python-stemming-words-with-nltk/)
 - Words into numbers. For that I use imdb word library. It has more than 50,000 words. 
-- Padding the messages so that length of all messages should be equal. To understand padding use[referenc](https://www.tensorflow.org/guide/keras/masking_and_padding)
+- Padding the messages so that length of all messages should be equal. To understand padding use[reference](https://www.tensorflow.org/guide/keras/masking_and_padding)
 
 Now the data is ready for building the model.
 
@@ -66,7 +66,7 @@ $ cd [your-project-folder]
 ```
 Clone the repo in your exiting project folder
 ```
-$ git clone https://github.com/g0urav-hustler/Crop-Production-Optimization.git
+$ git clone https://github.com/g0urav-hustler/Thought-Analyzer.git
 ```
 Making virual environment 
 ```
