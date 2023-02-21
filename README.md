@@ -4,8 +4,6 @@
 ## Overview 
 #### It was website that predicts your thought wheather it is positive or negetive.
 
-
-----------------------------
 ## Technical Aspects
 
 ### About Dataset
