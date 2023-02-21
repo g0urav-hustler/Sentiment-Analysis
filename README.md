@@ -1,12 +1,9 @@
 <h1 align = 'center' >Thought Analyzer  </h1>
 
-**Website** : [Thought Analyzer](https://thought-analyzer.herokuapp.com/)
 
 ## Overview 
 #### It was website that predicts your thought wheather it is positive or negetive.
 
-### Web view:
-![](https://github.com/g0urav-hustler/Thought-Analyzer/blob/master/readme%20resources/web%20image.png)
 
 ----------------------------
 ## Technical Aspects
