@@ -1,5 +1,6 @@
 <h1 align = 'center' >Thought Analyzer  </h1>
 
+**Web** : https://thought-analyzer.onrender.com
 
 **Api :** https://1wna3xut2i.execute-api.us-east-1.amazonaws.com/Thought-anlyzer-app/predict_func
 
